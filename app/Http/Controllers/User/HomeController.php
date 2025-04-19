@@ -34,7 +34,7 @@ class HomeController extends Controller
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',
             'reason' => 'nullable|string|max:255',
-            'leave_type_id' => 'required|int|exists:leave_types,id',
+            'leave_type_id' => 'required|string|exists:leave_types,id',
         ], [
             'end_date.after_or_equal' => 'The "End Date" must be after or equal to the "Start Date".',
         ]);
@@ -51,7 +51,7 @@ class HomeController extends Controller
         })->exists();
 
         if ($overlappingLeave) {
-            return back()->withErrors(['error' => 'Leave request overlaps with an existing leave request.']);
+            return back()->with('error', 'Leave request overlaps with an existing leave request.');
         }
 
         $employee->leaveRequests()->create($request->only(['start_date', 'end_date', 'leave_type_id', 'reason']));

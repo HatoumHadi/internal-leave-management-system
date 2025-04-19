@@ -5,6 +5,17 @@
         </h2>
     </x-slot>
 
+
+    @if(session('error'))
+        <div class="max-w-4xl mx-auto mt-6">
+            <div class="bg-red-200 text-red-800 dark:bg-red-600 dark:text-red-200 border border-red-400 px-4 py-3 rounded-lg shadow-md" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block">{{ session('error') }}</span>
+            </div>
+        </div>
+    @endif
+
+
     <div class="py-10">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-lg sm:rounded-xl">

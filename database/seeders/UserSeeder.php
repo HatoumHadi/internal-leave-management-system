@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@mail.com',
             'password' => Hash::make('password'),
             'department_id' => Department::inrandomOrder()->first()->id,
-            'role_id' => Role::whereName('Admin')->first()->id,
+            'role_id' => Role::whereName('admin')->first()->id,
         ]);
 
         $employee = User::factory()->create([
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'email' => 'hadiEmployee@mail.com',
             'password' => Hash::make('password'),
             'department_id' => Department::inrandomOrder()->first()->id,
-            'role_id' => Role::whereName('Employee')->first()->id,
+            'role_id' => Role::whereName('employee')->first()->id,
         ]);
 
     }
