@@ -25,14 +25,23 @@ The system is divided into two dashboards:
     - Admin can approve or deny leave requests.
     - Admin can view a list of all their leave requests.
 
+
 - **Employee Dashboard:**
     - Employees can submit new leave requests.
     - Employees can view a list of all their leave requests.
+
 
 - **Authentication:**
     - The application uses **[Laravel Breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze)** for authentication.
     - Breeze provides simple and minimal authentication scaffolding, including login, registration, and password reset functionality.
     - Users can securely register, log in, with minimal setup and built-in features.
+
+
+- **Testing:**
+    - The system includes tests to ensure proper functionality:
+        - **Admin tests:** Verify that the admin can manage and approve leave requests. These tests are located in the `Admin` feature tests.
+        - **Employee tests:** Ensure that employees can submit and view their leave requests. These tests are located in the `Employee` feature tests.
+
 
 --- 
 
