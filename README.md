@@ -84,20 +84,9 @@ Follow these steps to install and set up the system:
     ```bash
     php artisan migrate --seed
     ```
-   
-7. Install the frontend dependencies:
 
-    ```bash
-    npm install
-    ```
 
-8. Run the build process to compile the assets:
-
-    ```bash
-    npm run dev
-    ```
-
-9. Serve the application:
+7. Serve the application:
 
     ```bash
     php artisan serve
